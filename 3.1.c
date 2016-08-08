@@ -1,9 +1,9 @@
 
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int main(int argc, char const *argv[]) {
-  if(lseek(STDIN_FILENO, 0, SEEK_CUR) == -1)
+  if (lseek(STDIN_FILENO, 0, SEEK_CUR) == -1)
     printf("cannot seek\n");
   else
     printf("seek OK\n");

@@ -1,14 +1,14 @@
 
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 
-#define BUFFZIE  4096
+#define BUFFZIE 4096
 
 int main(int argc, char const *argv[]) {
   int n;
   char buf[BUFFZIE];
   while ((n = read(STDIN_FILENO, buf, BUFFZIE)) > 0)
-    if(write(STDOUT_FILENO, buf, n) != n){
+    if (write(STDOUT_FILENO, buf, n) != n) {
       perror("write error");
       return 1;
     }
